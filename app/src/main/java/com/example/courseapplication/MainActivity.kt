@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.courseapplication.components.ButtonForDarkMode
 import com.example.courseapplication.ui.theme.CourseApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -63,17 +64,5 @@ fun Content(darkMode: MutableState<Boolean>){
     }
 }
 
-@Composable
-fun ButtonForDarkMode(darkModeFun : MutableState<Boolean>){
-    Button(
-        onClick = {
-           darkModeFun.value = !darkModeFun.value
-        },
-        ) {
-        Icon(imageVector = Icons.Default.Star, contentDescription = "Dark Mode" )
-        Spacer(modifier = Modifier.width(5.dp))
-        Text(text = "Dark Mode")
-    }
-}
 
 
